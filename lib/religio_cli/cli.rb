@@ -1,6 +1,7 @@
 class ReligioCLI::CLI
 
   def call
+    ReligioCLI::Scraper.initiate_scraper
     puts "Hello there! Welcome to Religio. I offer information on the top 50 Major Religious traditions. Please see the list below, presented in alphabetical order."
     puts " "
     list_religions
@@ -30,8 +31,8 @@ class ReligioCLI::CLI
     puts "Which religious tradition would you like to learn more about?"
     choice = nil
     choice = gets.strip
-    if choice.to_i > 0 && input.to_i <= ReligioCLI::Trads.all.length
-      display_religion(input.to_i)
+    if choice.to_i > 0 && choice.to_i <= ReligioCLI::Trads.all.length
+      display_religion(choice.to_i)
     elsif choice == "exit".downcase
       goodbye
     else
