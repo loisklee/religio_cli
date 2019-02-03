@@ -4,7 +4,6 @@ class ReligioCLI::CLI
     ReligioCLI::Scraper.initiate_scraper
     puts "Hello there! Welcome to Religio. I offer information on the top 50 Major Religious traditions. Please see the list below, presented in alphabetical order."
     puts " "
-    list_religions
     menu
   end
 
@@ -26,6 +25,7 @@ class ReligioCLI::CLI
   end
 
   def menu
+    list_religions
     puts "For details on a particular tradition, type the number associated."
     puts "To exit at any time, enter 'exit'."
     puts "Which religious tradition would you like to learn more about?"
@@ -33,6 +33,21 @@ class ReligioCLI::CLI
     choice = gets.strip
     if choice.to_i > 0 && choice.to_i <= ReligioCLI::Trads.all.length
       display_religion(choice.to_i)
+      puts "Would you like to learn more about another religion?"
+      puts "Enter Y or N"
+      input = gets.strip.downcase
+      if input == "y"
+        menu
+      elsif input == "n"
+        goodbye
+        exit
+      elsif input == "exit"
+        goodbye
+        exit
+      else
+        puts "I'm not sure what you'd like. Please see the below the list:"
+        menu
+      end
     elsif choice == "exit".downcase
       goodbye
     else

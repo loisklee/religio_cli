@@ -1,11 +1,11 @@
 class ReligioCLI::Trads
-  attr_accessor :name, :quick_facts, :religion_url, :description
+  attr_accessor :name, :quick_facts, :url, :description
   @@all = []
 
   def initialize(religion_hash)
     @name = religion_hash[:name]
     @quick_facts = religion_hash[:quick_facts]
-    @religion_url = religion_hash[:url]
+    @url = religion_hash[:url]
     @@all << self
   end
 
