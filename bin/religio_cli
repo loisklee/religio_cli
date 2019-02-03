@@ -1,0 +1,3 @@
+#! /usr/bin/env ruby
+
+ReligioCLI::CLI.new.call
