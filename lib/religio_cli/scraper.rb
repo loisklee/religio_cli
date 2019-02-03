@@ -13,7 +13,6 @@ class ReligioCLI::Scraper
     doc.css("div.col-lg-3.col-md-4.col-xs-6.remove-padding.related-content.colored.brand-prime-1.religionSquare").each do |content|
       name = content.css("h2.remove-margin.over-dark.text-uppercase").text
       quick_facts = content.css("div.details.text-uppercase").text.strip.gsub("Origin", "origin\:").gsub("adherents", "adherents\:").gsub("Formed", "formed\:").gsub("\r\n "+"                        ","").upcase
-      binding.pry
       url = content.css("a").map{ |link| link['href'] }[0]
       religion_hashes << {:name => name, :url => url, :quick_facts => quick_facts}
     end
@@ -22,7 +21,7 @@ class ReligioCLI::Scraper
 
   def self.religion_scraper_details(url)
     doc = Nokogiri::HTML(open(url))
-    description = doc.css("div.dropcap.buffer-bottom").text
+    description = doc.css("div.dropcap.buffer-bottom").text.strip!
     religion_details = {:description => description}
     religion_details
   end

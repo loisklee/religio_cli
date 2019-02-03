@@ -16,9 +16,11 @@ class ReligioCLI::CLI
   def display_religion(integer)
     user_selection = ReligioCLI::Trads.all[integer-1]
     puts " "
-    puts user_selection.name
+    puts user_selection.name.upcase
+    puts " "
     puts user_selection.quick_facts
-    puts "\n\t#{user_selection.description}"
+    puts " "
+    puts "#{user_selection.description}"
     puts " "
     puts "To learn more, visit:"
     puts user_selection.url
@@ -57,7 +59,7 @@ class ReligioCLI::CLI
   end
 
   def goodbye
-    puts "Thanks for exploring! We hope you learned something cool today. Feel free to visit anytime : )"
+    puts "Thanks for exploring! I hope you learned something cool today. Feel free to stop by anytime :)"
   end
 
 end
