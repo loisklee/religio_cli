@@ -1,8 +1,6 @@
 # ReligioCli
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/religio_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to Religio! This is a Ruby Gem that scrapes information on the top 50 Major Religious traditions around the world from the website Patheos: https://www.patheos.com/library
 
 ## Installation
 
@@ -22,7 +20,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To start, type the below and follow the on-screen prompts.
+
+    $ religio_cli
+
+Happy learning!
 
 ## Development
 
