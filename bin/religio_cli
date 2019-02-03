@@ -1,3 +1,5 @@
-#! /usr/bin/env ruby
+#!/usr/bin/env ruby
+
+require './lib/religio_cli'
 
 ReligioCLI::CLI.new.call

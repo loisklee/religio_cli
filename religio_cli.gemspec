@@ -5,7 +5,7 @@ require "religio_cli/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "religio_cli"
-  spec.version       = ReligioCli::VERSION
+  spec.version       = ReligioCLI::VERSION
   spec.authors       = ["'Lois Lee'"]
   spec.email         = ["'lois.lee@me.com'"]
 

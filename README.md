@@ -1,4 +1,4 @@
-# ReligioCli
+# ReligioCLI
 
 Welcome to Religio! This is a Ruby Gem that scrapes information on the top 50 Major Religious traditions around the world from the website Patheos: https://www.patheos.com/library
 
