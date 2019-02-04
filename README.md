@@ -4,25 +4,23 @@ Welcome to Religio! This is a Ruby Gem that scrapes information on the top 50 Ma
 
 ## Installation
 
-Add this line to your application's Gemfile:
+To add this gem, type in the command line:
 
-```ruby
-gem 'religio_cli'
-```
+  $ git clone git@github.com:loisklee/religio_cli.git
+
+Next, enter:
+
+  $ cd religio_cli
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install religio_cli
+  $ bundle install
 
 ## Usage
 
 To start, type the below and follow the on-screen prompts.
 
-    $ religio_cli
+    $ bin/religio_cli
 
 Happy learning!
 
