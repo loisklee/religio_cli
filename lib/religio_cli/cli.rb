@@ -4,6 +4,7 @@ class ReligioCLI::CLI
     ReligioCLI::Scraper.initiate_scraper
     puts "Hello there! Welcome to Religio. I offer information on the top 50 Major Religious traditions. Please see the list below, presented in alphabetical order."
     puts " "
+    list_religions
     menu
   end
 
@@ -27,7 +28,6 @@ class ReligioCLI::CLI
   end
 
   def menu
-    list_religions
     puts "For details on a particular tradition, type the number associated."
     puts "To exit at any time, enter 'exit'."
     puts "Which religious tradition would you like to learn more about?"
