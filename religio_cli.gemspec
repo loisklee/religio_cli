@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'lois.lee@me.com'"]
 
   spec.summary       = %q{Learn about world religious traditions with this CLI!}
-  spec.description   = %q{Scraped using the Patheos website: https://www.patheos.com/library}
+  spec.description   = %q{Welcome to Religio! This is a Ruby Gem that scrapes information on the top 50 Major Religious traditions around the world from the website Patheos: https://www.patheos.com/library}
   spec.homepage      = "https://github.com/loisklee/religio_cli"
   spec.license       = "MIT"
 
