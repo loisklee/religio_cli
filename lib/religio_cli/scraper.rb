@@ -2,9 +2,9 @@ class ReligioCLI::Scraper
 
   def self.initiate_scraper
     ReligioCLI::Trads.create_from_array(religion_scraper)
-    ReligioCLI::Trads.all.each do |religion|
-      religion.religion_details(religion_scraper_details(religion.url))
-    end
+  #  ReligioCLI::Trads.all.each do |religion|
+    #  religion.religion_details(religion_scraper_details(religion.url))
+  #  end
   end
 
   def self.religion_scraper
@@ -19,11 +19,10 @@ class ReligioCLI::Scraper
     religion_hashes
   end
 
-  def self.religion_scraper_details(url)
-    doc = Nokogiri::HTML(open(url))
-    description = doc.css("div.dropcap.buffer-bottom").text.strip!
-    religion_details = {:description => description}
-    religion_details
+  def self.religion_scraper_details(selected_religion)
+    puts "************** scraping details"
+    doc = Nokogiri::HTML(open(selected_religion.url))
+    selected_religion.description = doc.css("div.dropcap.buffer-bottom").text.strip!
   end
 
 end

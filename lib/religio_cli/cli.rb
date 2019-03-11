@@ -24,8 +24,7 @@ class ReligioCLI::CLI
     end
   end
 
-  def display_religion(integer)
-    user_selection = ReligioCLI::Trads.all[integer-1]
+  def display_religion(user_selection)
     puts " "
     puts user_selection.name.upcase
     puts " "
@@ -44,7 +43,9 @@ class ReligioCLI::CLI
     choice = nil
     choice = gets.strip
     if choice.to_i > 0 && choice.to_i <= ReligioCLI::Trads.all.length
-      display_religion(choice.to_i)
+      selected_religion = ReligioCLI::Trads.all[choice.to_i-1]
+      ReligioCLI::Scraper.religion_scraper_details(selected_religion)
+      display_religion(selected_religion)
       puts "Would you like to learn more about another religion?"
       puts "Enter Y or N"
       input = gets.strip.downcase
