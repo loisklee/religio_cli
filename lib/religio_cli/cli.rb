@@ -30,7 +30,7 @@ class ReligioCLI::CLI
     puts " "
     puts user_selection.quick_facts
     puts " "
-    puts "#{user_selection.description}"
+    puts user_selection.description
     puts " "
     puts "To learn more, visit:"
     puts user_selection.url

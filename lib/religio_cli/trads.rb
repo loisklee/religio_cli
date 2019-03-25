@@ -13,10 +13,10 @@ class ReligioCLI::Trads
     religion_hash_array.each {|religion_hash| ReligioCLI::Trads.new(religion_hash)}
   end
 
-  def religion_details(religion_hash)
-    @description = religion_hash[:description]
+  def religion_details(select_details)
+    @description = select_details[:description]
   end
-
+  
   def self.all
     @@all
   end
