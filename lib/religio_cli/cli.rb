@@ -44,7 +44,7 @@ class ReligioCLI::CLI
     choice = gets.strip
     if choice.to_i > 0 && choice.to_i <= ReligioCLI::Trads.all.length
       selected_religion = ReligioCLI::Trads.all[choice.to_i-1]
-      ReligioCLI::Scraper.religion_scraper_details(selected_religion)
+      ReligioCLI::Scraper.religion_scraper_details(selected_religion) unless selected_religion.description != nil
       display_religion(selected_religion)
       puts "Would you like to learn more about another religion?"
       puts "Enter Y or N"

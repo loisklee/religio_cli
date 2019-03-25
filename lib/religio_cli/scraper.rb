@@ -17,6 +17,7 @@ class ReligioCLI::Scraper
   end
 
   def self.religion_scraper_details(selected_religion)
+    puts '*** scraping'
     doc = Nokogiri::HTML(open(selected_religion.url))
     selected_religion.description =  doc.css("div.dropcap.buffer-bottom").text.strip!
     select_details = {:description => selected_religion.description}
